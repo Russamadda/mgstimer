@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Study Timer</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="study-timer-heading">Study Timer</h1>
+    <div id="timer">25:00</div>
+    <div class="study-hours-text">Study hours: <span id="studyHours">0</span></div>
+
+    <input type="number" id="studyHoursInput" min="0" step="0.1" placeholder="Enter study hours">
+    <br>
+    <button id="startButton">START</button>
+    
+
+    <audio id="timerSound" src="/statics/Sounds/timer-sound.mp3"></audio>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
